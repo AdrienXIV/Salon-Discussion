@@ -1,0 +1,95 @@
+body,
+html {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: #fcfcfc;
+}
+
+.center-div {
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: max-content;
+    width: max-content;
+    border: solid silver 1px;
+    padding: 15px;
+}
+
+.label-formulaire {
+    font-size: 20px;
+}
+
+.btn-size {
+    margin-top: 4%;
+    transform: scale(1);
+    width: 100%;
+}
+
+.btn-size:active {
+    transform: scale(0.95);
+}
+
+.titre-color {
+    background-color: #130f40;
+    color: white;
+    padding: 20px;
+}
+
+.div-largeur {
+    width: 500px;
+}
+
+footer {
+    background: #ccc;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.salle-block{
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: solid #27ae60 1px;
+    border-radius: 5px;
+    text-align: center;
+    height: 100px;
+    position: relative;
+    top: 0;
+    padding-top:30px;
+    font:bold 30px Arial;
+    cursor: pointer;
+}
+.salle-block:active{
+    transform: scale(1.01)
+}
+.salle-block:hover{
+    background-color: #27ae60;
+    color: white;
+}
+
+.btn-salle {
+    position: relative;
+	width:60px;
+	height:60px;
+	background:#fafafa;
+    box-shadow:2px 2px 8px #2d3436;
+	font:bold 30px Arial;
+	border-radius:50%;
+    color: #0984e3;
+    top: 0;
+    left: 10px;
+}
+.btn-salle:active {
+    transform: scale(0.95);
+}
+
+.text-center{
+    text-align: center;
+}
