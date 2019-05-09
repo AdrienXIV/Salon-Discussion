@@ -5,19 +5,30 @@ html {
     height: 100%;
     background-color: #fcfcfc;
 }
-
+.cursor-pointer{
+    cursor: pointer;
+}
 .center-div {
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-    position: absolute;
     margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    margin-bottom: 100px;
+    margin-top: 50px;
     height: max-content;
     width: max-content;
     border: solid silver 1px;
     padding: 15px;
+}
+.center-div-choix {
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    margin: auto;
+    margin-top: 10%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: max-content;
+    width: 50%;
+    border: solid silver 1px;
+    padding: 25px;
 }
 
 .label-formulaire {
@@ -25,13 +36,17 @@ html {
 }
 
 .btn-size {
-    margin-top: 4%;
+    font-size: 20px;
     transform: scale(1);
     width: 100%;
+    height: 50px;
 }
-
 .btn-size:active {
     transform: scale(0.95);
+}
+
+.margin-top{
+    margin-top: 15px;
 }
 
 .titre-color {
@@ -45,9 +60,9 @@ html {
 }
 
 footer {
+
+    margin-top: 50px;
     background: #ccc;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     height: 50px;
 }
@@ -90,6 +105,24 @@ footer {
     transform: scale(0.95);
 }
 
+.btn-accueil{
+    position: relative;
+	width:100px;
+	height:50px;
+    box-shadow:2px 2px 8px #2d3436;
+    font-size: 18px;
+    top: 0;
+    right: 10px;
+    float: right;
+}
+.btn-accueil:active {
+    transform: scale(0.95);
+}
+
 .text-center{
     text-align: center;
+}
+
+.display{
+    display: none;
 }

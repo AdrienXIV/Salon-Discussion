@@ -1,5 +1,6 @@
 var salle = document.getElementsByClassName('salle-block');
 var btn = document.getElementById('button');
+var accueil = document.getElementById('accueil');
 
 var salleCompteur = 0;
 var tab = [0];
@@ -35,3 +36,7 @@ function ajout(txt) {
 
     document.body.appendChild(newDiv);
 };
+
+accueil.onclick = ()=>{
+    window.location = '../';
+}

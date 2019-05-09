@@ -2,37 +2,103 @@
 <html>
 
 <head>
+    <title>Salon de discussion</title>
+    <link rel="icon" href="public/images/discussion.png" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="public/style.css">
 </head>
 
 <body>
+    <!--   EN TETE   -->
     <div class="container-fluid titre-color" style="margin-bottom:10px;">
         <div class="container">
             <div class="row">
                 <article class="col-sm-12 col-md col-xl col-lg text-center">
                     <h1>Salon de discussion</h1>
-                    <p>Connexion </p>
+                    <p>Identification</p>
                 </article>
             </div>
         </div>
     </div>
 
-    <div class="center-div">
-        <form>
+    <!--   FORMULAIRE DE CHOIX   -->
+    <div class="center-div-choix" id="formulaire-choix">
+        <input type="submit" value="S'inscrire" class="btn btn-outline-dark btn-size" id="btn-inscription">
+        <input type="submit" value="Se connecter" class="btn btn-outline-secondary btn-size margin-top"
+            id="btn-connexion">
+    </div>
+
+
+    <!--   FORMULAIRE D'INSCRIPTION   -->
+    <div class="center-div display" id="formulaire-inscription">
+        <form action="/inscription" method="POST">
             <div class="form-group div-largeur">
-                <label class="blockquote" for="formGroupExampleInput">Nom d'utilisateur</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="nom d'utilisateur">
+                <label class="blockquote" for="utilisateur">Nom d'utilisateur</label>
+                <input type="text" class="form-control" placeholder="nom d'utilisateur" name="utilisateur">
             </div>
             <div class="form-group">
-                <label class="blockquote" for="formGroupExampleInput2">Mot de passe</label>
-                <input type="password" class="form-control input-size" id="formGroupExampleInput2"
-                    placeholder="mot de passe">
+                <label class="blockquote" for="mdp">Mot de passe</label>
+                <input type="password" class="form-control input-size" placeholder="mot de passe" name="mdp">
             </div>
-            <button onclick="window.location.href='salle.html'" type="button" class="btn btn-outline-success btn-size">Valider</button>
+            <div class="form-group">
+                <label class="blockquote" for="pseudo">Pseudo</label>
+                <input type="text" class="form-control input-size" placeholder="pseudo" name="pseudo">
+            </div>
+            <input id="inscription-valider" type="submit" value="Valider" class="btn btn-outline-success btn-size">
+            <button id="inscription-annuler" type="reset"
+                class="btn btn-outline-danger btn-size margin-top cursor-pointer">Annuler</button>
         </form>
     </div>
-<footer></footer>
+
+
+    <!--   FORMULAIRE DE CONNEXION   -->
+    <div class="center-div display" id="formulaire-connexion">
+        <form action="/connexion" method="POST">
+            <div class="form-group div-largeur">
+                <label class="blockquote" for="utilisateur">Nom d'utilisateur</label>
+                <input type="text" class="form-control" id="utilisateur" placeholder="nom d'utilisateur"
+                    name="username">
+            </div>
+            <div class="form-group">
+                <label class="blockquote" for="mdp">Mot de passe</label>
+                <input type="password" class="form-control input-size" id="mdp" placeholder="mot de passe" name="password">
+            </div>
+            <input id="connexion-connexion" type="submit" value="Connexion" class="btn btn-outline-success btn-size">
+            <button id="connexion-annuler" type="reset"
+                class="btn btn-outline-danger btn-size margin-top cursor-pointer">Annuler</button>
+        </form>
+    </div>
+
+    <script>
+        var inscription = document.getElementById('btn-inscription');
+        var connexion = document.getElementById('btn-connexion');
+        var annuler_inscription = document.getElementById('inscription-annuler');
+        var annuler_connexion = document.getElementById('connexion-annuler');
+        var btn_connexion = document.getElementById('connexion-connexion');
+
+        inscription.onclick = () => {
+            document.getElementById('formulaire-inscription').style.display = 'block';
+            document.getElementById('formulaire-connexion').style.display = 'none';
+            document.getElementById('formulaire-choix').style.display = 'none';
+        };
+        connexion.onclick = () => {
+            document.getElementById('formulaire-inscription').style.display = 'none';
+            document.getElementById('formulaire-connexion').style.display = 'block';
+            document.getElementById('formulaire-choix').style.display = 'none';
+        };
+
+        annuler_connexion.onclick = () => {
+            document.getElementById('formulaire-inscription').style.display = 'none';
+            document.getElementById('formulaire-connexion').style.display = 'none';
+            document.getElementById('formulaire-choix').style.display = 'block';
+        };
+        annuler_inscription.onclick = () => {
+            document.getElementById('formulaire-inscription').style.display = 'none';
+            document.getElementById('formulaire-connexion').style.display = 'none';
+            document.getElementById('formulaire-choix').style.display = 'block';
+        };
+
+    </script>
 </body>
 
 </html>
