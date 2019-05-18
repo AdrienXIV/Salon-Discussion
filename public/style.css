@@ -5,9 +5,33 @@ html {
     height: 100%;
     background-color: #fcfcfc;
 }
-.cursor-pointer{
+
+p{
+    font-size: 12px;
+}
+.pseudo-chat{
+    font-size: 13px;
+    color : white;
+    background-color : #009432;
+    border: solid 1px #009432;
+    border-radius: 2px;
+    padding: 5px;
+}
+.champ-requis {
+    font-size: 10px;
+    font-style: italic;
+}
+
+.asterix {
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: red;
+}
+
+.cursor-pointer {
     cursor: pointer;
 }
+
 .center-div {
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
     margin: auto;
@@ -18,6 +42,7 @@ html {
     border: solid silver 1px;
     padding: 15px;
 }
+
 .center-div-choix {
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
     margin: auto;
@@ -31,6 +56,46 @@ html {
     padding: 25px;
 }
 
+.center-div-chat {
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    margin: auto;
+    margin-top: 5%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: max-content;
+    width: 50%;
+    height: 60%;
+    border: solid silver 1px;
+    padding: 15px;
+}
+
+.zone-chat {
+    border: solid 1px silver;
+    width: 100%;
+    height: 70%;
+    padding: 10px;
+}
+
+.envoie-message {
+    margin-top: 10px;
+}
+.overflow{
+    outline: none;
+    user-select: text;
+    white-space: pre-wrap;
+    overflow: auto;
+    overflow-wrap: break-word;
+}
+.message {
+    height: 100px;
+    outline: none;
+    user-select: text;
+    white-space: pre-wrap;
+    overflow: auto;
+    overflow-wrap: break-word;
+}
+
 .label-formulaire {
     font-size: 20px;
 }
@@ -41,11 +106,12 @@ html {
     width: 100%;
     height: 50px;
 }
+
 .btn-size:active {
     transform: scale(0.95);
 }
 
-.margin-top{
+.margin-top {
     margin-top: 15px;
 }
 
@@ -67,7 +133,7 @@ footer {
     height: 50px;
 }
 
-.salle-block{
+.salle-block {
     position: relative;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -77,52 +143,56 @@ footer {
     height: 100px;
     position: relative;
     top: 0;
-    padding-top:30px;
-    font:bold 30px Arial;
+    padding-top: 30px;
+    font: bold 30px Arial;
     cursor: pointer;
 }
-.salle-block:active{
+
+.salle-block:active {
     transform: scale(1.01)
 }
-.salle-block:hover{
+
+.salle-block:hover {
     background-color: #27ae60;
     color: white;
 }
 
 .btn-salle {
     position: relative;
-	width:60px;
-	height:60px;
-	background:#fafafa;
-    box-shadow:2px 2px 8px #2d3436;
-	font:bold 30px Arial;
-	border-radius:50%;
+    width: 60px;
+    height: 60px;
+    background: #fafafa;
+    box-shadow: 2px 2px 8px #2d3436;
+    font: bold 30px Arial;
+    border-radius: 50%;
     color: #0984e3;
     top: 0;
     left: 10px;
 }
+
 .btn-salle:active {
     transform: scale(0.95);
 }
 
-.btn-accueil{
+.btn-accueil {
     position: relative;
-	width:100px;
-	height:50px;
-    box-shadow:2px 2px 8px #2d3436;
+    width: 100px;
+    height: 50px;
+    box-shadow: 2px 2px 8px #2d3436;
     font-size: 18px;
     top: 0;
     right: 10px;
     float: right;
 }
+
 .btn-accueil:active {
     transform: scale(0.95);
 }
 
-.text-center{
+.text-center {
     text-align: center;
 }
 
-.display{
+.display {
     display: none;
 }

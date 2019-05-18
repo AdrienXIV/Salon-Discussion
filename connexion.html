@@ -2,8 +2,8 @@
 <html>
 
 <head>
-        <title>Salon de discussion</title>
-        <link rel="icon" href="public/images/discussion.png" />
+    <title>Salon de discussion</title>
+    <link rel="icon" href="public/images/discussion.png" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="public/style.css">
 </head>
@@ -20,23 +20,34 @@
         </div>
     </div>
 
-    <div class="center-div">
-        <form method="POST">
+    <!--   FORMULAIRE DE CONNEXION   -->
+    <div class="center-div" id="formulaire-connexion">
+        <form action="/connexion" method="POST">
             <div class="form-group div-largeur">
                 <label class="blockquote" for="utilisateur">Nom d'utilisateur</label>
                 <input type="text" class="form-control" id="utilisateur" placeholder="nom d'utilisateur"
-                    name="utilisateur">
+                    name="username">
             </div>
             <div class="form-group">
                 <label class="blockquote" for="mdp">Mot de passe</label>
-                <input type="password" class="form-control input-size" id="mdp" placeholder="mot de passe" name="mdp">
+                <input type="password" class="form-control input-size" id="mdp" placeholder="mot de passe"
+                    name="password">
             </div>
-            <input id="connexion" type="submit" value="Connexion" class="btn btn-outline-success btn-size">
-            <input id="annuler" type="submit" value="Connexion" class="btn btn-outline-success btn-size">
-
+            <input id="connexion-connexion" type="submit" value="Connexion" class="btn btn-outline-success btn-size">
+            <button id="connexion-annuler" type="reset"
+                class="btn btn-outline-danger btn-size margin-top cursor-pointer">Annuler</button>
         </form>
     </div>
+
     <footer></footer>
+    
+    <script>
+        const annuler = document.getElementById('connexion-annuler');
+
+        annuler.onclick = () => {
+            window.location = '../';
+        };
+    </script>
 </body>
 
 </html>

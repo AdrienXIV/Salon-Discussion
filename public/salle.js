@@ -8,23 +8,26 @@ var tab = [0];
 
 var boucle = setInterval(() => {
     for (let i = 0; i < salle.length; i++) {
-        bordure(i);
+        //bordure(i);
     }
 }, 50);
 
-btn.addEventListener('click', () => {
-    let txt = window.prompt('Nom de la salle', 'Salle')
+/*btn.addEventListener('click', () => {
+    const txt = window.prompt('Nom de la salle', 'Salle')
 
     if (txt == null) return;
     else ajout(txt);
-});
+});*/
 
-function bordure(i) {
+/*function bordure(i) {
     salle[i].onclick = () => {
         tab.push(i);
         salle[tab[0]].style.border = 'solid 1px #27ae60';
         //salle[i].style.borderColor = '';
         salle[i].style.border = '3px solid #27ae60';
+        let path = window.location.pathname;
+        window.location = '/salle' + i;
+        
         tab.shift();
     };
 };
@@ -35,8 +38,9 @@ function ajout(txt) {
     newDiv.innerText = txt;
 
     document.body.appendChild(newDiv);
-};
 
-accueil.onclick = ()=>{
+};*/
+
+accueil.onclick = () => {
     window.location = '../';
-}
+};
