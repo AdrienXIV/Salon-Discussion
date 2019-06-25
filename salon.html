@@ -36,11 +36,10 @@
 
     </div>
 
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="public/salle.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script>
-        var socket = io.connect('http://localhost:3000');
+        var socket = io.connect('http://localhost:3333');
         var btn = document.getElementById('btn');
         var message = document.getElementById('message');
         var zone_chat = document.getElementById('zone_chat');
@@ -61,6 +60,9 @@
         // récupère le pseudo
         socket.on('zone-pseudo', function (msg) {
             pseudo = msg;
+        })
+        socket.on('nouveau_client', function (msg){
+            insereMessage(msg);
         })
 
         /*

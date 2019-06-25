@@ -20,7 +20,7 @@ app.get('/', (req, res) => res.sendFile('index.html', {
     root: __dirname
 }));
 
-const port = process.env.PORT || 3000;
+const port =  process.env.NODE_PORT || 3333;
 serveur.listen(port, () => console.log('Serveur en écoute sur le port ' + port));
 
 app.post('/formulaire-connexion', (req, res) => {
@@ -210,18 +210,18 @@ app.get('/salle0', (req, res) => {
     res.write(`</html>`)
     res.end();
 })*/
-var pseudonyme ="";
+var pseudonyme;
 function pseudo(pseudo) {
     pseudonyme = pseudo;
 }
 io.sockets.on('connection', function (socket, pseudo) {
     // Dès qu'on nous donne un pseudo, on le stocke en variable de session et on informe les autres personnes
-   /*socket.on('nouveau_client', function (pseudo) {
-        pseudo = ent.encode(pseudo);
+   socket.on('nouveau_client', function (pseudo) {
+        //pseudo = ent.encode(pseudo);
         socket.pseudo = pseudo;
-        socket.broadcast.emit('nouveau_client', pseudo);
+        socket.broadcast.emit('nouveau_client', pseudo + " vient de se connecter !");
 
-    }); */   
+    });   
     
     // écoute si quelqu'un envoie un message et renvoie le message avec le pseudo de la personne connectée sur la page
     socket.on('zone-chat', function (message) {
